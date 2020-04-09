@@ -1,0 +1,2 @@
+include ':app', ':fooddata', ':authlibrary', ':Result', ':imagestorage'
+rootProject.name='FoodApp'

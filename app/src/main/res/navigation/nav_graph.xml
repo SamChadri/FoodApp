@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/signIn">
+
+    <activity
+        android:id="@+id/signIn"
+        android:name="com.example.foodapp.loginHelper.SignIn"
+        android:label="activity_sign_in"
+        tools:layout="@layout/activity_sign_in" >
+        <action
+            android:id="@+id/action_signIn_to_getStarted"
+            app:destination="@id/getStarted" />
+    </activity>
+    <activity
+        android:id="@+id/getStarted"
+        android:name="com.example.foodapp.RegisterUI.GetStarted"
+        android:label="activity_get_started"
+        tools:layout="@layout/activity_get_started" >
+        <action
+            android:id="@+id/action_getStarted_to_nameEntry"
+            app:destination="@id/nameEntry" />
+    </activity>
+    <activity
+        android:id="@+id/nameEntry"
+        android:name="com.example.foodapp.RegisterUI.NameEntry"
+        android:label="activity_name_entry"
+        app:action="passUser"
+        tools:layout="@layout/activity_name_entry">
+        <action
+            android:id="@+id/action_nameEntry_to_displayNameEntry"
+            app:destination="@id/displayNameEntry" />
+        <argument
+            android:name="userHashmap"
+            app:argType="java.util.HashMap"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </activity>
+    <activity
+        android:id="@+id/emailEntry"
+        android:name="com.example.foodapp.RegisterUI.EmailEntry"
+        android:label="activity_email_entry"
+        tools:layout="@layout/activity_email_entry" >
+        <action
+            android:id="@+id/action_emailEntry_to_createPassword"
+            app:destination="@id/createPassword" />
+        <argument
+            android:name="userHashMap"
+            app:argType="java.util.HashMap" />
+    </activity>
+    <activity
+        android:id="@+id/displayNameEntry"
+        android:name="com.example.foodapp.RegisterUI.DisplayNameEntry"
+        android:label="activity_display_name_entry"
+        tools:layout="@layout/activity_display_name_entry">
+        <action
+            android:id="@+id/action_displayNameEntry_to_emailEntry"
+            app:destination="@id/emailEntry" />
+        <argument
+            android:name="userHashMap"
+            app:argType="java.util.HashMap" />
+    </activity>
+    <activity
+        android:id="@+id/createPassword"
+        android:name="com.example.foodapp.RegisterUI.CreatePassword"
+        android:label="activity_create_password"
+        tools:layout="@layout/activity_create_password" >
+        <argument
+            android:name="userHashMap"
+            app:argType="java.util.HashMap" />
+        <action
+            android:id="@+id/action_createPassword_to_verifyRegistration"
+            app:destination="@id/verifyRegistration" />
+    </activity>
+    <activity
+        android:id="@+id/verifyRegistration"
+        android:name="com.example.foodapp.RegisterUI.verifyRegistration"
+        android:label="activity_verify_registration"
+        tools:layout="@layout/activity_verify_registration" >
+        <argument
+            android:name="userHashMap"
+            app:argType="java.util.HashMap" />
+        <action
+            android:id="@+id/action_verifyRegistration_to_signIn"
+            app:destination="@id/signIn" />
+    </activity>
+</navigation>

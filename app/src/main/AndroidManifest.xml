@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.foodapp">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".RegisterUI.DateOfBirth"
+            android:parentActivityName=".RegisterUI.EmailEntry">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.foodapp.RegisterUI.EmailEntry" />
+        </activity>
+        <activity
+            android:name=".ui.create.Create"
+            android:label="@string/title_activity_create"
+            android:theme="@style/AppTheme.NoActionBarAndStatusBar"
+            android:parentActivityName="com.example.foodapp.Capture">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.foodapp.Capture" />
+        </activity>
+        <activity
+            android:name=".Capture"
+            android:label="@string/title_activity_capture"
+            android:theme="@style/AppTheme.NoActionBarAndStatusBar"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Home"/>
+        <activity
+            android:name=".ItemListActivity"
+            android:label="@string/title_item_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ItemDetailActivity"
+            android:label="@string/title_item_detail"
+            android:parentActivityName=".ItemListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.foodapp.ItemListActivity" />
+        </activity>
+        <activity
+            android:name=".Home"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBarAndStatusBar" />
+        <activity android:name=".forgotPasswordUI.resetPassword"
+            android:parentActivityName=".forgotPasswordUI.sendReset"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.foodapp.forgotPasswordUI.sendReset" />
+        </activity>
+        <activity android:name=".forgotPasswordUI.sendReset"
+            android:parentActivityName=".loginHelper.SignIn"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.foodapp.loginHelper.SignIn" />
+        </activity>
+        <activity android:name=".RegisterUI.verifyRegistration"
+            android:parentActivityName=".RegisterUI.CreatePassword"
+            android:theme="@style/AppTheme">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.foodapp.RegisterUI.CreatePassword" />
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="foodstore-563e8.firebaseapp.com"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RegisterUI.CreatePassword"
+            android:parentActivityName=".RegisterUI.DateOfBirth"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.foodapp.RegisterUI.DateOfBirth" />
+        </activity>
+        <activity android:name=".RegisterUI.DisplayNameEntry"
+            android:parentActivityName=".RegisterUI.NameEntry"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.foodapp.RegisterUI.NameEntry" />
+
+        </activity>
+        <activity android:name=".RegisterUI.EmailEntry"
+            android:parentActivityName=".RegisterUI.DisplayNameEntry"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.foodapp.RegisterUI.DisplayNameEntry" />
+        </activity>
+        <activity android:name=".RegisterUI.NameEntry"
+            android:parentActivityName=".RegisterUI.GetStarted"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.foodapp.RegisterUI.GetStarted" />
+
+        </activity>
+
+        <activity android:name=".RegisterUI.GetStarted"
+            android:parentActivityName=".loginHelper.SignIn"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.foodapp.loginHelper.SignIn" />
+        </activity>
+        <activity android:name=".loginHelper.SignIn"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="foodstore.page.link"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

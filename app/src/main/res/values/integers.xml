@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="feedTabPosition">0</integer>
+    <integer name="recipeTabPositon">1</integer>
+    <integer name="viewHolderKey">100</integer>
+</resources>

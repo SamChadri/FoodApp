@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/cabin</item>
+        <item>@font/cabin_bold</item>
+        <item>@font/cabin_condensed_medium</item>
+        <item>@font/cabin_condensed_regular</item>
+        <item>@font/cabin_medium</item>
+        <item>@font/cabin_semibold</item>
+        <item>@font/cairo</item>
+        <item>@font/cairo_extralight</item>
+        <item>@font/cairo_light</item>
+    </array>
+</resources>

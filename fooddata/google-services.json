@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "651525417308",
+    "firebase_url": "https://foodstore-563e8.firebaseio.com",
+    "project_id": "foodstore-563e8",
+    "storage_bucket": "foodstore-563e8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651525417308:android:8c053d2445bc88c8d6f999",
+        "android_client_info": {
+          "package_name": "com.example.fooddata"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "651525417308-ndl2ov3bqa48r49mnqp39lt2qdmrs0c8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3KCqoH2ipwGkP99PUBUw9riaTEetXIkI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "651525417308-ndl2ov3bqa48r49mnqp39lt2qdmrs0c8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
