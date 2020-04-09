@@ -21,6 +21,10 @@ User authorization is handled by Firebase but the users are managed manually. In
 
 There are two sample users that provide the content displayed when logged in. Since there aren’t many users, the data retrieval is fairly trivial, but this can be improved upon when more data is collected. The majority of the data was scraped from Food.com, but has been modified to fit the purposes of this app.
 
+### AI
+
+Machine learning has been incorporated into the image capture process. However, since the accuracy isn't very high and can still be imporved, the results are never displayed. Ideally, the model should be able to detect foods/recipes and maybe even provide ingredients for them. 
+
 ### Further Implementation
 Features to be implemented at a later date
 
@@ -29,6 +33,7 @@ Features to be implemented at a later date
 - Video Recording
 - Edit Profile/ Add Stuff there
 - Sharing content
+- Better AI
 - Everything in Discover
 
 
